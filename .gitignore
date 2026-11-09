@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS generated artifacts
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+~$*.docx
+
+# Environment
+.env
+.venv/
+venv/
+env/
+ENV/
+
+# Large raw reanalysis grids and massive public works microdata (>30MB)
+data/raw/ECMWF_*
+data/raw/public_works_registry_191180.parquet
+data/spatial/v_distritos_2023.*
+
+# Keep all replication datasets, processed panels, tables, figures, code, and submission packages
+!data/processed/*.csv
+!data/processed/*.parquet
+!data/processed/*.json
+!data/raw/*.json
+!data/raw/*.txt
+!data/raw/*.csv
+!data/raw/district_master_atlas_1873.parquet
