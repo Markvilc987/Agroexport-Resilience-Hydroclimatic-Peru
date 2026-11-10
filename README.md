@@ -1,9 +1,9 @@
 # Hydroclimatic Anomalies, First-Mile Supply-Chain Bottlenecks, and Crop Resilience: Multi-Scale Evidence from 26-Year Satellite Reanalysis, 40,538 Infrastructure Works, and Debiased Machine Learning in Peru
 
 **Author:** Juan Marcos Vilchez-Canchari $^{a,b,*}$  
-$^a$ *Escuela de Posgrado, Universidad César Vallejo, Lima, Peru*  
+$^a$ *Universidad César Vallejo, Lima, Peru*  
 $^b$ *Universidad Privada San Juan Bautista, Lima, Peru*  
-$^*$ *Corresponding author. Email address: jvilchezc@ucvvirtual.edu.pe*
+$^*$ *Corresponding author. Email address: jvilchezca@ucv.edu.pe*
 
 **Target Q1 Journal:** *Agricultural Systems* (Elsevier, Q1) / *Socio-Economic Planning Sciences* (Elsevier, Q1)
 

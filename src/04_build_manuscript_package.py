@@ -72,7 +72,7 @@ def add_author_block(doc):
     p_a.paragraph_format.space_after = Pt(2)
     ra_s = p_a.add_run("a ")
     ra_s.font.superscript = True
-    ra_t = p_a.add_run("Escuela de Posgrado, Universidad César Vallejo, Lima, Peru")
+    ra_t = p_a.add_run("Universidad César Vallejo, Lima, Peru")
     ra_t.italic = True
 
     p_b = doc.add_paragraph()
@@ -86,7 +86,7 @@ def add_author_block(doc):
     p_c.paragraph_format.space_after = Pt(10)
     rc_s = p_c.add_run("* ")
     rc_s.font.superscript = True
-    rc_t = p_c.add_run("Corresponding author. Email address: jvilchezc@ucvvirtual.edu.pe")
+    rc_t = p_c.add_run("Corresponding author. Email address: jvilchezca@ucv.edu.pe")
     rc_t.italic = True
 
 
@@ -1147,9 +1147,9 @@ def build_latex_and_readme(df_t1, df_t2, df_t3, df_t4, df_dist):
 
 \\title{{\\textbf{{{TITLE}}}}}
 \\author{{\\textbf{{Juan Marcos Vilchez-Canchari}}$^{{a,b,*}}$ \\\\
-\\small $^a$ \\textit{{Escuela de Posgrado, Universidad C\\'esar Vallejo, Lima, Peru}} \\\\
+\\small $^a$ \\textit{{Universidad C\\'esar Vallejo, Lima, Peru}} \\\\
 \\small $^b$ \\textit{{Universidad Privada San Juan Bautista, Lima, Peru}} \\\\
-\\small $^*$ \\textit{{Corresponding author. Email address: jvilchezc@ucvvirtual.edu.pe}}}}
+\\small $^*$ \\textit{{Corresponding author. Email address: jvilchezca@ucv.edu.pe}}}}
 \\date{{November 2026}}
 
 \\begin{{document}}
@@ -1171,9 +1171,9 @@ See complete manuscript in \\texttt{{submission\\_package\\_Q1\\_Elsevier/04\\_M
     readme_content = f"""# {TITLE}
 
 **Author:** Juan Marcos Vilchez-Canchari $^{{a,b,*}}$  
-$^a$ *Escuela de Posgrado, Universidad César Vallejo, Lima, Peru*  
+$^a$ *Universidad César Vallejo, Lima, Peru*  
 $^b$ *Universidad Privada San Juan Bautista, Lima, Peru*  
-$^*$ *Corresponding author. Email address: jvilchezc@ucvvirtual.edu.pe*
+$^*$ *Corresponding author. Email address: jvilchezca@ucv.edu.pe*
 
 **Target Q1 Journal:** *Agricultural Systems* (Elsevier, Q1) / *Socio-Economic Planning Sciences* (Elsevier, Q1)
 
@@ -1242,6 +1242,12 @@ def verify_manuscript_consistency(df_t1, df_t2, df_t3, df_t4, df_dist):
     p1_2500 = df_t4[(df_t4["budget_ceiling_million_soles"] == 2500) & (df_t4["allocation_policy"].str.contains("Policy 1"))].iloc[0]
     assert f"{p4_2500['resilience_gain_captured_pct']:.1f}%" in full_text, "Policy 4 gain at S/ 2,500M missing from text"
     assert f"{p1_2500['resilience_gain_captured_pct']:.1f}%" in full_text, "Policy 1 gain at S/ 2,500M missing from text"
+
+    # 5. Verify updated author, affiliation, and email
+    assert "jvilchezca@ucv.edu.pe" in full_text, "Updated email jvilchezca@ucv.edu.pe missing from manuscript"
+    assert "Universidad César Vallejo, Lima, Peru" in full_text, "Updated affiliation Universidad César Vallejo missing from manuscript"
+    assert "Escuela de Posgrado" not in full_text, "Old affiliation 'Escuela de Posgrado' must not appear"
+    assert "jvilchezc@ucvvirtual.edu.pe" not in full_text, "Old email jvilchezc@ucvvirtual.edu.pe must not appear"
 
     print("  [PASS] 100% of coefficients, signs, p-values, crop counts (18 crops / 24 series), overrun percentages,")
     print(f"         bottleneck district counts ({n_bot_dist:,}), and Pareto optimization figures are verified identical!")
