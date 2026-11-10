@@ -5,7 +5,7 @@ $^a$ *Universidad César Vallejo, Lima, Peru*
 $^b$ *Universidad Privada San Juan Bautista, Lima, Peru*  
 $^*$ *Corresponding author. Email address: jvilchezca@ucv.edu.pe*
 
-**Target Q1 Journal:** *Agricultural Systems* (Elsevier, Q1) / *Socio-Economic Planning Sciences* (Elsevier, Q1)
+**Target Q1 Journal:** *Agricultural Systems* (Elsevier, Q1)
 
 ---
 

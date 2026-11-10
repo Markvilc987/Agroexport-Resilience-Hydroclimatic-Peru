@@ -271,8 +271,8 @@ def build_01_title_page(df_t2, df_t4):
     p_j = doc.add_paragraph()
     p_j.add_run("Primary Target Journal: ").bold = True
     p_j.add_run("Agricultural Systems (Elsevier, Q1 in Agronomy & Crop Science / Agricultural Economics & Policy).\n")
-    p_j.add_run("Alternative Compatible Q1 Outlets: ").bold = True
-    p_j.add_run("Socio-Economic Planning Sciences (Elsevier Q1); Transportation Research Part E: Logistics and Transportation Review (Elsevier Q1).\n")
+    p_j.add_run("Alternative Compatible Q1 Outlet: ").bold = True
+    p_j.add_run("Transportation Research Part E: Logistics and Transportation Review (Elsevier Q1).\n")
     p_j.add_run("Article Type: ").bold = True
     p_j.add_run("Original Research Article.")
 
@@ -1175,7 +1175,7 @@ $^a$ *Universidad César Vallejo, Lima, Peru*
 $^b$ *Universidad Privada San Juan Bautista, Lima, Peru*  
 $^*$ *Corresponding author. Email address: jvilchezca@ucv.edu.pe*
 
-**Target Q1 Journal:** *Agricultural Systems* (Elsevier, Q1) / *Socio-Economic Planning Sciences* (Elsevier, Q1)
+**Target Q1 Journal:** *Agricultural Systems* (Elsevier, Q1)
 
 ---
 
